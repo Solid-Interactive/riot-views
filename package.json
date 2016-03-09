@@ -1,0 +1,39 @@
+{
+  "name": "riot-views",
+  "version": "0.0.0",
+  "description": "Reusable Riot components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/solid-interactive/riot-views.git"
+  },
+  "keywords": [
+    "riot",
+    "components"
+  ],
+  "author": "Solid Interactive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solid-interactive/riot-views/issues"
+  },
+  "homepage": "https://github.com/solid-interactive/riot-views#readme",
+  "dependencies" : {
+    "clamp-js": "^0.7.0",
+    "jade": "^1.11.0",
+    "riot": "^2.2.4",
+    "riotify": "^0.1.2"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "riotify",
+        {
+          "template": "jade"
+        }
+      ]
+    ]
+  }
+}
