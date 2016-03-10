@@ -4,12 +4,13 @@ sc-tabs
             li(no-reorder each="{ item, index in model.tabs }" style="{ parent.itemWidth() }" class="{ active : active(index) }")
                 a(href="{ '#' + item.hash }" onclick="{ activate }") { item.label }
         .underline(name='underline' style="{ itemWidth() }")
-    style(scoped).
+    style(scoped type="scss").
         ul {
             display: flex;
-        }
-        a {
-            text-decoration: none;
+
+            a {
+                text-decoration: none;
+            }
         }
         .underline {
             height : 2px;
