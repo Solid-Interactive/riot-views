@@ -20,11 +20,13 @@
     "url": "https://github.com/solid-interactive/riot-views/issues"
   },
   "homepage": "https://github.com/solid-interactive/riot-views#readme",
-  "dependencies" : {
+  "dependencies": {
     "clamp-js": "^0.7.0",
     "jade": "^1.11.0",
+    "lodash": "^4.6.1",
     "riot": "^2.2.4",
-    "riotify": "^0.1.2"
+    "riotify": "^0.1.2",
+    "velocity-animate": "^1.2.3"
   },
   "browserify": {
     "transform": [
