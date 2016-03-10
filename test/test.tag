@@ -18,3 +18,7 @@ test
         This should be clamped.
         This should be clamped.
         This should be clamped.
+    br
+    br
+    br
+    sc-carousel(images="{ opts.images }" transition="{ slide }" callback="{ opts.imagesCallback }")
