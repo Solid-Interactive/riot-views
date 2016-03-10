@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var runner = require('node-shell-runner');
+
+runner.run([
+    ['watchify test/index.js -o test/bundle.js -vd', 'Starting watchify', { async : true }],
+    ['python -m SimpleHTTPServer', { cwd : 'test'} ]
+]);
