@@ -2,14 +2,14 @@
 
 This is a collection of reusable riot views. They can be used as components to build up functionality.
 
-Each view is prefixed with `sc-` (Solid Compnonent).
+Each view is prefixed with `solid-` (Solid Compnonent).
 
 ## Guide
 
-### `sc-clamp`
+### `solid-clamp`
 
 ```javascript
-require('riot-views/sc-clamp.tag')
+require('riot-views/solid-clamp.tag')
 ```
 
 Dependencies : `clamp-js`
@@ -24,17 +24,17 @@ Content:
 * Text you want clamped.
 
 ```html
-<sc-clamp lines="2">
+<solid-clamp lines="2">
     The following text will be clamped to
     two lines even if the text is longer
     than two lines.
-</sc-clamp>
+</solid-clamp>
 ```
 
-### `sc-tabs`
+### `solid-tabs`
 
 ```javascript
-require('riot-views/sc-tabs.tag')
+require('riot-views/solid-tabs.tag')
 ```
 
 Dependencies : `velocity`
@@ -59,5 +59,5 @@ riot.mount(tabsView, {
 ```
 
 ```html
-<sc-tabs tabs="{ opts.tabs }" callback="{ opts.callback }"> </sc-tabs>
+<solid-tabs tabs="{ opts.tabs }" callback="{ opts.callback }"> </solid-tabs>
 ```

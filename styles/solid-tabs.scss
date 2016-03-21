@@ -1,0 +1,14 @@
+@import "colors";
+
+ul {
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
+}
+.underline {
+  height : 2px;
+  background-color: $secondary;
+}

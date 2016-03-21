@@ -1,9 +1,9 @@
 test
-    sc-tabs(tabs="{ opts.tabs }" callback="{ opts.callback }")
+    solid-tabs(tabs="{ opts.tabs }" callback="{ opts.callback }")
     br
     br
     br
-    sc-clamp(lines="1").
+    solid-clamp(lines="1").
         This should be clamped.
         This should be clamped.
         This should be clamped.
@@ -21,4 +21,4 @@ test
     br
     br
     br
-    sc-carousel(images="{ opts.images }" transition="{ slide }" callback="{ opts.imagesCallback }")
+    solid-carousel(images="{ opts.images }" transition="{ slide }" callback="{ opts.imagesCallback }")

@@ -1,4 +1,0 @@
-sc-carousel
-
-    style.
-    script.
