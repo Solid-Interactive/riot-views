@@ -1,6 +1,6 @@
 {
   "name": "riot-views",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reusable Riot components.",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,9 @@
     "riot": "^2.2.4",
     "riotify": "^0.1.2",
     "velocity-animate": "^1.2.3"
+  },
+  "devDependencies" : {
+    "node-shell-runner": "^0.0.1"
   },
   "browserify": {
     "transform": [

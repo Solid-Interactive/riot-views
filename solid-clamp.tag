@@ -1,4 +1,4 @@
-sc-clamp
+solid-clamp
     <yield/>
     script.
         'use strict';
