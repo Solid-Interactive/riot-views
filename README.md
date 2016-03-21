@@ -61,3 +61,26 @@ riot.mount(tabsView, {
 ```html
 <solid-tabs tabs="{ opts.tabs }" callback="{ opts.callback }"> </solid-tabs>
 ```
+
+### `solid-raw`
+
+```javascript
+require('riot-views/solid-raw.tag')
+```
+
+Dependencies : none
+
+Will output html string. Riot by default will not template html. Use this tag when you want to template html.
+
+Attributes:
+* content: an html string.
+
+```javascript
+riot.mount(rawView, {
+    htmlString : '<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit, sed do <strong>eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua.</p>'
+});
+```
+
+```html
+<solid-raw content="{ opts.htmlString }"> </solid-raw>
+```

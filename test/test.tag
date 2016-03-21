@@ -22,3 +22,6 @@ test
     br
     br
     solid-carousel(images="{ opts.images }" transition="{ slide }" callback="{ opts.imagesCallback }")
+    br
+    br
+    solid-raw(content='{ opts.htmlString }')
