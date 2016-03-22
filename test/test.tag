@@ -6,7 +6,10 @@ test
     input(type="text" value="Open Modal" onclick="{ openModal }")
     solid-modal(name="modal1")
         solid-modal-close
-        p This is a modal
+        p This is a modal1
+    solid-modal(name="modal2")
+        solid-modal-close
+        p This is a modal2
     br
     br
     br
@@ -33,8 +36,13 @@ test
     br
     solid-raw(content='{ opts.htmlString }')
     script.
+        var self = this;
         this.openModal = openModal;
 
         function openModal() {
-            this.tags.modal1.show();
+            self.tags
+                    .modal1.show()
+                    .then(function() {
+                        return self.tags.modal2.show();
+                    });
         }

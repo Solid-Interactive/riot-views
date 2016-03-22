@@ -23,25 +23,23 @@ solid-modal
                 self.resolve = resolve;
                 self.reject = reject;
             });
+            self.update();
             return self.promise;
         }
 
         function hide() {
             self.modalOpen = false;
+            self.update();
         }
 
         function close() {
             self.hide();
             self.resolve();
-            if (self !== this) {
-                self.update();
-            }
+            self.update();
         }
 
         function cancel() {
             self.hide();
             self.reject();
-            if (self !== this) {
-                self.update();
-            }
+            self.update();
         }
