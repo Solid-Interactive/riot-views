@@ -25,6 +25,7 @@
     "clamp-js": "^0.7.0",
     "jade": "^1.11.0",
     "lodash": "^4.6.1",
+    "node-sass": "^3.4.2",
     "riot": "^2.2.4",
     "riotify": "^0.1.2",
     "velocity-animate": "^1.2.3"
