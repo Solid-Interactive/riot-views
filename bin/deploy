@@ -8,6 +8,6 @@ runner.run([
     ['browserify test/index.js -o test/bundle.js -vd', 'Browserify'],
     ['mkdir dist || echo "dist already there"', 'creating dist dir'],
     ['cp test/{index.html,reset.css,bundle.js} dist', 'copying into dist'],
-    ['grunt deploy -f', 'cross branch commit']
+    ['grunt buildGhPages -f', 'cross branch commit']
 ]);
 
