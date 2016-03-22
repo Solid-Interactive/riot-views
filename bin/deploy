@@ -1,4 +1,12 @@
-#!/usr/bin/env/bash
+#!/usr/bin/env node
 
-grunt deploy -f
+'use strict';
+
+var runner = require('node-shell-runner');
+
+runner.run([
+    ['browserify test/index.js -o test/bundle.js -vd', 'Browserify'],
+    ['cp test/{index.html,reset.css,bundle.js} dist', 'copying into dist'],
+    ['grunt deploy -f', 'cross branch commit']
+]);
 
