@@ -1,10 +1,16 @@
 # Riot Views
 
-Documentation: http://documentup.com/solid-interactive/riot-views
-
 This is a collection of reusable riot views. They can be used as components to build up functionality.
 
 Each view is prefixed with `solid-` (Solid Compnonent).
+
+## Example
+
+http://solid-interactive.github.io/riot-views/
+
+## These docs in alternative format
+
+http://documentup.com/solid-interactive/riot-views
 
 ## Guide
 
