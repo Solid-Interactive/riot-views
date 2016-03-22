@@ -1,5 +1,7 @@
 # Riot Views
 
+Documentation: http://documentup.com/solid-interactive/riot-views
+
 This is a collection of reusable riot views. They can be used as components to build up functionality.
 
 Each view is prefixed with `solid-` (Solid Compnonent).
@@ -29,6 +31,79 @@ Content:
     two lines even if the text is longer
     than two lines.
 </solid-clamp>
+```
+
+### Modals
+
+#### `solid-modal`
+
+```javascript
+require('riot-views/solid-modal.tag')
+```
+
+Dependencies : `bluebird`
+
+This modal can be openend using `tag.show()`. This will return a promise that is resolved if the modal is closed, or
+ rejected if the modal is canceled.
+
+```html
+<my-view>
+    <p onclick="{ openModal }">Open modal</p>
+    <solid-modal name="modal">
+        <p>
+            This is a modal.
+        </p>
+    </solid-modal>
+    <script>
+        this.openModal = function openModal() {
+            this.tags.modal.show().then(...).catch(...);
+        }
+    </script>
+</my-view>
+```
+
+
+
+#### `solid-modal-close`
+
+```javascript
+require('riot-views/solid-modal-close.tag')
+```
+
+Dependencies : none
+
+Clicking on this view will trigger close on the parent view.
+
+```html
+<solid-modal>
+    <solid-modal-close> </solid-modal-close>
+    <p>
+        This is a modal.
+    </p>
+</solid-modal>
+```
+
+### `solid-raw`
+
+```javascript
+require('riot-views/solid-raw.tag')
+```
+
+Dependencies : none
+
+Will output html string. Riot by default will not template html. Use this tag when you want to template html.
+
+Attributes:
+* content: an html string.
+
+```javascript
+riot.mount(rawView, {
+    htmlString : '<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit, sed do <strong>eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua.</p>'
+});
+```
+
+```html
+<solid-raw content="{ opts.htmlString }"> </solid-raw>
 ```
 
 ### `solid-tabs`
@@ -62,25 +137,3 @@ riot.mount(tabsView, {
 <solid-tabs tabs="{ opts.tabs }" callback="{ opts.callback }"> </solid-tabs>
 ```
 
-### `solid-raw`
-
-```javascript
-require('riot-views/solid-raw.tag')
-```
-
-Dependencies : none
-
-Will output html string. Riot by default will not template html. Use this tag when you want to template html.
-
-Attributes:
-* content: an html string.
-
-```javascript
-riot.mount(rawView, {
-    htmlString : '<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit, sed do <strong>eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua.</p>'
-});
-```
-
-```html
-<solid-raw content="{ opts.htmlString }"> </solid-raw>
-```

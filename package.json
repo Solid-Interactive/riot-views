@@ -1,6 +1,6 @@
 {
   "name": "riot-views",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Reusable Riot components.",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/solid-interactive/riot-views#readme",
   "dependencies": {
+    "bluebird": "^3.3.4",
     "clamp-js": "^0.7.0",
     "jade": "^1.11.0",
     "lodash": "^4.6.1",
@@ -28,7 +29,7 @@
     "riotify": "^0.1.2",
     "velocity-animate": "^1.2.3"
   },
-  "devDependencies" : {
+  "devDependencies": {
     "node-shell-runner": "^0.0.1"
   },
   "browserify": {

@@ -3,8 +3,9 @@
 var riot = require('riot'),
     testView = require('./test.tag');
 
-require('../solid-carousel.tag');
 require('../solid-clamp.tag');
+require('../solid-modal.tag');
+require('../solid-modal-close.tag');
 require('../solid-tabs.tag');
 require('../solid-raw.tag');
 
@@ -26,6 +27,6 @@ riot.mount(testView, {
             title : 'Message',
             url : 'img/message.png'
         }
-    ]
+    ],
     htmlString : '<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit, sed do <strong>eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua.</p>'
 });
