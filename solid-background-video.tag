@@ -1,6 +1,6 @@
 solid-background-video
     .video-block(name='videoWrapper')
-        video(if='{ canShowVideo }' name='backgroundVideo' volume='0' autoplay=true playbackRate=1 loop=true)
+        video(if='{ canShowVideo }' name='backgroundVideo' muted=true autoplay=true playbackRate=1 loop=true)
             source(if='{ canShowVideo && hasMp4 }' src='{ opts.mp4 }' type='video/mp4')
             source(if='{ canShowVideo && hasWebm }' src='{ opts.webm }' type='video/webm')
     .video-poster(if='{ hasPoster }' name='videoPoster' style='background-image: { opts.poster };').showing
