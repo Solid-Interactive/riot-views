@@ -5,7 +5,7 @@ solid-tabs
                 a(href="{ '#' + item.hash }" onclick="{ activate }") { item.label }
         .underline(name='underline' style="{ itemWidth() }")
     style(scoped type="scss").
-        @import "styles/solid-tabs.scss";
+        @import "node_modules/riot-views/styles/solid-tabs.scss";
     script.
         var velocity = require('velocity-animate');
 

@@ -5,7 +5,7 @@ solid-background-video
             source(if='{ canShowVideo && hasWebm }' src='{ opts.webm }' type='video/webm')
     .video-poster(if='{ hasPoster }' name='videoPoster' style='background-image: { opts.poster };').showing
     style(scoped type='scss').
-        @import 'styles/solid-background-video.scss';
+        @import 'node_modules/riot-views/styles/solid-background-video.scss';
     script.
         'use strict';
 

@@ -2,7 +2,7 @@ solid-modal
     .container(if="{ modalOpen }")
         <yield/>
     style(scoped type="scss").
-        @import "styles/solid-modal.scss";
+        @import "node_modules/riot-views/styles/solid-modal.scss";
     script.
         var BB = require('bluebird'),
             self = this;
