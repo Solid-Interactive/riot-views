@@ -3,7 +3,7 @@ solid-background-video
         video(if='{ canShowVideo }' name='backgroundVideo' muted=true autoplay=true playbackRate=1 loop=true)
             source(if='{ canShowVideo && hasMp4 }' src='{ opts.mp4 }' type='video/mp4')
             source(if='{ canShowVideo && hasWebm }' src='{ opts.webm }' type='video/webm')
-    .video-poster(if='{ hasPoster }' name='videoPoster' style='background-image: { opts.poster };').showing
+    .video-poster(if='{ hasPoster }' name='videoPoster' style='background-image: url("{ opts.poster }");').showing
     style(scoped type='scss').
         @import 'node_modules/riot-views/styles/solid-background-video.scss';
     script.
