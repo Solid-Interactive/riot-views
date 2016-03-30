@@ -1,0 +1,48 @@
+.video-block {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    video {
+        margin: auto;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+
+        // Disable visibility, while loading
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 0.4s ease;
+        transition: opacity 0.4s ease;
+
+        &.loaded {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.video-poster {
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 100%;
+    width: auto;
+
+    &.showing {
+        display: block;
+    }
+}

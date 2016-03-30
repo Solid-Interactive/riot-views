@@ -35,6 +35,14 @@ test
     br
     br
     solid-raw(content='{ opts.htmlString }')
+    br
+    br
+    br
+    div(style='position: relative; width: 100%; height: 500px;')
+        solid-background-video(mp4='{ opts.backgroundVideo.mp4 }' poster='{ opts.backgroundVideo.poster }' maxwidthforplayback='{ opts.backgroundVideo.maxwidthforplayback }')
+    br
+    br
+    br
     script.
         var self = this;
         this.openModal = openModal;

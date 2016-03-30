@@ -8,6 +8,7 @@ require('../solid-modal.tag');
 require('../solid-modal-close.tag');
 require('../solid-tabs.tag');
 require('../solid-raw.tag');
+require('../solid-background-video.tag');
 
 riot.mount(testView, {
     tabs : [
@@ -28,5 +29,10 @@ riot.mount(testView, {
             url : 'img/message.png'
         }
     ],
-    htmlString : '<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit, sed do <strong>eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua.</p>'
+    htmlString : '<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit, sed do <strong>eiusmod</strong> tempor incididunt ut labore et dolore magna aliqua.</p>',
+    backgroundVideo : {
+        mp4 : 'https://media.w3.org/2010/05/sintel/trailer.mp4',
+        poster : 'http://placehold.it/800x500',
+        maxwidthforplayback : 480
+    }
 });

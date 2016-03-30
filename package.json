@@ -1,6 +1,6 @@
 {
   "name": "riot-views",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Reusable Riot components.",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,9 @@
     "bluebird": "^3.3.4",
     "clamp-js": "^0.7.0",
     "jade": "^1.11.0",
+    "listen-once": "^2.0.0",
     "lodash": "^4.6.1",
+    "lodash.throttle": "^4.0.1",
     "node-sass": "^3.4.2",
     "riot": "^2.2.4",
     "riotify": "^0.1.2",

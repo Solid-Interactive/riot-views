@@ -143,3 +143,36 @@ riot.mount(tabsView, {
 <solid-tabs tabs="{ opts.tabs }" callback="{ opts.callback }"> </solid-tabs>
 ```
 
+### `solid-background-video`
+
+```javascript
+require('riot-views/solid-background-video.tag');
+```
+
+Dependencies : [`listen-once`](https://github.com/Duder-onomy/listen-once), [`lodash.throttle`](https://www.npmjs.com/package/lodash.throttle)
+
+Big background video, will autoplay and loop. Will resize with browser and maintain aspect ratio while covering parent tag.
+
+Attributes:
+* `mp4` : REQUIRED. A path to a mp4 file.
+* `webm` : RECOMMENDED. A path to a webm file.
+* `poster` : REQUIRED. A poster image to show when the browser does not support, OR, when when on mobile.
+* `maxwidthforplayback` : REQUIRED. A pixel size that will be the max width the video will play. If below this value, show the poster (mobile).
+
+```javascript
+riot.mount(backgroundVideoView, {
+    mp4 : 'https://media.w3.org/2010/05/sintel/trailer.mp4',
+    webm : 'https://media.w3.org/2010/05/sintel/trailer.webm',
+    poster : 'http://placehold.it/800x500',
+    maxwidthforplayback : 480
+});
+```
+
+```html
+<div style='position: relative; width: 100%; height: 500px;'>
+    <solid-background-video mp4='{ opts.backgroundVideo.mp4 }' poster='{ opts.backgroundVideo.poster }' maxwidthforplayback='{ opts.backgroundVideo.maxwidthforplayback }'/>
+</div>
+```
+
+#### Important
+When using this tag, it must be wrapped in a relatively positioned parent, with a height and a width set.
