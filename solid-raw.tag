@@ -1,6 +1,9 @@
 solid-raw
-    style(scoped type='scss').
-        @import 'node_modules/riot-views/styles/solid-raw.scss';
+    style.
+        solid-raw {
+            display: inline-block;
+            height: auto;
+        }
     script.
         'use strict';
         this.root.innerHTML = opts.content
