@@ -1,7 +1,6 @@
 solid-raw
     style.
         solid-raw {
-            display: inline-block;
             height: auto;
         }
 

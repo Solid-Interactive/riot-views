@@ -1,6 +1,6 @@
 {
   "name": "riot-views",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Reusable Riot components.",
   "main": "index.js",
   "scripts": {
