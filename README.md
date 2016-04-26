@@ -158,13 +158,15 @@ Attributes:
 * `webm` : RECOMMENDED. A path to a webm file.
 * `poster` : REQUIRED. A poster image to show when the browser does not support, OR, when when on mobile.
 * `maxwidthforplayback` : REQUIRED. A pixel size that will be the max width the video will play. If below this value, show the poster (mobile).
+* `playonmobile` : RECOMMENDED. If you want to cancel playback on any mobile devices (not just by the width displayed above.)
 
 ```javascript
 riot.mount(backgroundVideoView, {
     mp4 : 'https://media.w3.org/2010/05/sintel/trailer.mp4',
     webm : 'https://media.w3.org/2010/05/sintel/trailer.webm',
     poster : 'http://placehold.it/800x500',
-    maxwidthforplayback : 480
+    maxwidthforplayback : 480,
+    playonmobile : true
 });
 ```
 

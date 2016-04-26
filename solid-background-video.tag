@@ -10,17 +10,25 @@ solid-background-video
         'use strict';
 
         var listenOnce = require('listen-once'),
-            throttle = require('lodash.throttle');
+            throttle = require('lodash.throttle'),
+            mobileDetective = require('mobile-detective');
             
         this.hasMp4 = false;
         this.hasWebM = false;
         this.hasPoster = false;
         this.hasMaxWidthSet = false;
+        this.hasCanPlayOnMobileSet = false;
+        
+        this.canShowVideo = false;
 
         this.on('before-mount', function() {
             _ensureVideoOptions.call(this);
-
-            this.canShowVideo = this.hasMaxWidthSet && (window.innerWidth > this.opts.maxwidthforplayback) && this.hasPoster;
+            
+            this.canShowVideo = this.hasMaxWidthSet && (window.innerWidth > parseInt(this.opts.maxwidthforplayback, 10)) && this.hasPoster;
+            debugger;
+            if(this.canShowVideo && this.hasCanPlayOnMobileSet && this.opts.playonmobile == 'false' && mobileDetective.any) {
+                this.canShowVideo = false;
+            }
         });
 
         this.on('mount', function() {
@@ -79,5 +87,11 @@ solid-background-video
                 console.log('YOU MUST PASS A MAX WIDTH FOR PLAYBACK TO THE SOLID BACKGROUND VIDEO TAG, `maxwidthforplayback`');
             } else {
                 this.hasMaxWidthSet = true;
+            }
+
+            if(this.opts.playonmobile == undefined) {
+                console.log('IT IS RECMOMENDED THAT YOU ALSO PASS BOOLEAN TO THE SOLID BACKGROUND VIDEO TAG TELLING IT IF IT CAN PLAY ON MOBILE, `playonmobile`');
+            } else {
+                this.hasCanPlayOnMobileSet = true;
             }
         }
