@@ -25,7 +25,7 @@ solid-background-video
             _ensureVideoOptions.call(this);
             
             this.canShowVideo = this.hasMaxWidthSet && (window.innerWidth > parseInt(this.opts.maxwidthforplayback, 10)) && this.hasPoster;
-            debugger;
+            
             if(this.canShowVideo && this.hasCanPlayOnMobileSet && this.opts.playonmobile == 'false' && mobileDetective.any) {
                 this.canShowVideo = false;
             }
